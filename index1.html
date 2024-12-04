@@ -26,7 +26,7 @@
 
     <!-- 性別の入力 -->
     <div class="mb-3">
-      <label for="sex" class="form-label">性別 (0: 男性, 1: 女性):</label>
+      <label for="sex" class="form-label">性別 (0: 女性, 1: 男性):</label>
       <input 
         type="number" 
         id="sex" 
@@ -67,13 +67,13 @@
   <script>
     // 決定木アルゴリズム
     function Survival(pclass, sex) {
-      if (sex <= 0.5) {  // 性別が男性の場合
+      if (sex <= 0.5) {  // 性別が女性の場合
         if (pclass <= 2.5) {  // 客室等級が1または2の場合
           return 1;  // 生存
         } else {
           return 0;  // 死亡
         }
-      } else {  // 性別が女性の場合
+      } else {  // 性別が男性の場合
         return 0;  // 死亡
       }
     }
