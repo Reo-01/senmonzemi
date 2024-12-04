@@ -14,15 +14,18 @@ form.addEventListener('submit', function(event) {
 function Survival(pclass, sex) {
   if (sex <= 0.5) {  
     if (pclass <= 2.5) { 
-      return 1; 
+      return 1;  // 生存 (survived=1)
     } else {
-      return 0;
+      return 0;  // 死亡 (survived=0)
     }
   } else {
-      return 0;
+      return 0;  // 死亡 (survived=0)
   }
 }
 
 function displayResult(prediction) {
-  resultDiv.textContent = prediction ? '生存' : '死亡'; 
-}
+  resultDiv.textContent = '生存' : '死亡'; 
+} 
+
+
+
